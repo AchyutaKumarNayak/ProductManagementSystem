@@ -1,0 +1,146 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+    header{
+           height: auto;
+           width: auto;
+           padding-top: 20px;
+           padding-left:20px;
+           background-color: rgb(69, 69, 164);
+           color: white;
+           font-size: 25px;
+           font-family: Arial;
+           display: flex;
+           justify-content: space-between;
+           padding:15px;
+        }
+        section{
+           height: 100%;
+           width: 100%;
+           padding: 2%;
+        }
+        footer{
+           height: auto;
+           width: auto;
+           padding: 0.2%;
+           text-align: center;
+           background-color: rgb(69, 69, 164);
+           color: white;
+        }
+        footer a{
+          text-decoration: none;
+          margin-left: 1%;
+          margin-right: 1%;
+        }
+        section{
+           display: flex;
+           justify-content: center;
+           margin-bottom: 50px;
+        }
+        form div{
+        font-size:25px;
+        font-weight: bold;
+        font-family:Arial;
+         padding: 10px;
+         text-align: center;
+        }
+        h1{
+          font-size:40px;
+          text-align: center;
+          color: blue;
+          text-shadow: 2px 2px 2px gray;
+        }
+        .register a{
+         text-decoration: none;
+         border: 1px solid gray;
+         border-radius: 10px;
+         padding: 10px;
+         background-color:blue;
+         color: white;
+         margin-left: 10px;
+        }
+        .register span{
+          font-size: 15px;
+          font-family: Arial;
+          font-weight: bold;
+          color: red;
+        }
+        form{
+        
+          border: 1px solid gray;
+          padding: 10px;
+          border-radius: 15px;
+          box-shadow: 2px 2px 10px blue;
+        }
+        input{
+         text-align:  center;
+         height: 30px;
+         width: 350px;
+         border-radius: 10px;
+         box-shadow: 1px 1px 3px blue;
+        }
+        .button{
+          height: 30px;
+          width: 150px;
+          border-radius: 10px;
+          background-color: green;
+          color: white;
+          font-size: 15px;
+          box-shadow: 2px 2px 2px blue;
+        }
+       header a{
+        text-decoration: none;
+        color: white;
+        font-size: 15px;
+        font-weight: bold;
+       }
+       form div{
+         text-shadow: 1px 1px 5px gray;
+       }
+       form h3{
+	      font-weight: bold;
+	      color: red;
+	      text-shadow: 2px 2px 3px blue;
+       }
+</style>
+</head>
+<body>
+     <header>
+            <div class="shop-name">
+               Product Store
+            </div>
+            <div>
+               <a href="home.html">Go Back</a>
+            </div>
+      </header>
+      <section>
+             
+                 <div class="main">
+                       <h1>Admin SignIn</h1>
+                        
+                      <form action="adminLogin" method="post">
+                        <div>
+                            <h3><%=(String)request.getAttribute("errMsg") %></h3>
+                        </div>
+				        <div >Admin User Name </div>
+				        <div><input type="text" name="name" placeholder="Enter User Email"></div>
+				        <div>Admin Password </div>
+				        <div><input type="text" name="password" placeholder="Enter Password"></div> 
+				        <div><input type="submit" value="Submit" class="button"></div>
+				        <div class="register">
+				             <span>Do You Have Account ?</span>
+				             <span><a href="admin-register.html">Register here</a></span>
+				        </div>
+				    </form>
+                 </div>
+      </section>
+       <footer>
+           <p>Contact us  ?  <a>achyutakumarnayak123@gmail.com</a> visit Again </p>
+       </footer>
+</body>
+</html>
